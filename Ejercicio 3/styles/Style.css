@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-weight: 300;
+    font-size: 70px;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    font-family: 'lato';
+}
+
+.container {
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    /*  flex-direction: row;*/
+    margin: 0;
+    padding: 0;
+}
+
+.bloque-1, .bloque-2, .bloque-3, .bloque-4, .bloque-5 {
+    height: 100%;
+    width: 20%;
+    position: relative;
+}
+
+.bloque-1 {
+    background: #244F75;
+}
+
+.difuminar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.difuminar::before {
+    content: "";
+    background-color: white;
+    transform: skew(30deg);
+    opacity: 0.1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.difuminar:hover:before {
+    background-color: white;
+    transform: scale(2);
+    transition-duration: .5s;
+    opacity: 0.1;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+}
+
+.bloque-2 {
+    background: #60bfbf;
+}
+
+.bloque-3 {
+    background: #8c4b7e;
+}
+
+.bloque-4 {
+    background: #f8bb44;
+}
+
+.bloque-5 {
+    background: #f24b4b;
+}
+
+/*
+.plano-1 {
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    opacity: 0.1;
+    -webkit-transform: skewx(20deg);
+    overflow: hidden;
+    z-index: 6;
+}
+.plano-2{
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    opacity: 0.1;
+   -webkit-transform: skewx(20deg);
+    margin-left: 20%;
+    overflow: hidden;
+   z-index: 16;
+}
+.plano-3{
+    position:absolute;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    opacity: 0.1;
+    transform: skewx(20deg);
+    margin-left: 40%;
+    overflow: hidden;
+ 
+}
+.plano-4{
+    position:absolute;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    opacity: 0.1;
+    transform: skewx(20deg);
+    margin-left: 60%;
+    overflow: hidden;
+    z-index: 9;
+
+}
+.plano-5{
+    position:absolute;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    opacity: 0.1;
+    transform: skewx(20deg);
+    margin-left: 80%;
+    overflow: hidden;
+    z-index: 6;
+   
+}
+
+.difuminar:hover {
+    transform: scale(2)
+}
+
+.plano-2:hover {
+    transform: scale(2);
+}
+
+.plano-3:hover {
+    transform: scale(2);
+}
+
+.plano-4:hover {
+    transform: scale(2);
+}
+
+.plano-5:hover {
+    transform: scale(2);
+}
+*/
+
+@keyframes bloque1 {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bloque2 {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
